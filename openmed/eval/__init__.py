@@ -45,6 +45,12 @@ from openmed.eval.release_gates import (
     ModelStewardConfig,
     ReleaseGate,
 )
+from openmed.eval.quant_delta import (
+    INT4_RECALL_DELTA_LIMIT,
+    INT8_RECALL_DELTA_LIMIT,
+    QuantRecallDeltaResult,
+    evaluate_quant_recall_delta,
+)
 
 
 __all__ = [
@@ -60,8 +66,11 @@ __all__ = [
     "FixtureResult",
     "GateCheck",
     "GateReport",
+    "INT4_RECALL_DELTA_LIMIT",
+    "INT8_RECALL_DELTA_LIMIT",
     "ModelStewardConfig",
     "QUARANTINED",
+    "QuantRecallDeltaResult",
     "RELEASABLE",
     "ReleaseGate",
     "artifact_dir_for",
@@ -80,6 +89,7 @@ __all__ = [
     "compute_resource_metrics",
     "compute_surrogate_consistency",
     "default_suite_calibration_samples",
+    "evaluate_quant_recall_delta",
     "fit_calibration_thresholds",
     "load_calibration_samples",
     "load_calibration_thresholds",
